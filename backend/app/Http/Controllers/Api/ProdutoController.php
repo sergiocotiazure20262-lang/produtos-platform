@@ -13,6 +13,7 @@ use Exception;
 /*
     Controlador para endpoints da API de produtos.
     Serviços de integração teste novo com relatorios
+    Deploy no Dockerhub
 */
 class ProdutoController extends Controller
 {
