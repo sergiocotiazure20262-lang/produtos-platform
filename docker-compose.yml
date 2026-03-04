@@ -129,6 +129,21 @@ services:
     networks:
       - produtos_net
 
+  # ==============================
+  # PHP MyAdmin (Acesso aos bancos de dados)
+  # ==============================
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: produtos_phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql
+    networks:
+      - produtos_net
 
 # ==============================
 # Rede interna Docker
